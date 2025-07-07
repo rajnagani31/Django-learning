@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nero Technology</title>
+</head>
+<body>
+    <h1>Complex Data Access</h1>
+    <h3>{{studant}}</h3>
+    <h3>{{studant.stu1}}</h3>
+    <h3>{{studant.stu1.name}}</h3>
+    <h3>{{studant.stu1.age}}</h3>
+    
+    <h1>Complex Data Access Using For Loop</h1>
+    {% for key ,value in studant.items  %}
+    {{key}}-<br />
+        {% for k,v in value.items  %}
+        {{k}}-{{v}} <br />
+        {% endfor %}
+    {% endfor %} 
+
+</body>
+</html>

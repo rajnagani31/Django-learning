@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for loop -->
+     <form action="" style="background-color:rgb(61, 197, 92)">
+        {% for field in form  %}
+        
+        <label for= "{{field.id_for_label}}" class="">{{field.label}} </label> 
+        <input type="{{field.field.widget.input_type}}" 
+        name="{{field.name}}"
+        maxlength="50"
+        required id="{{field.id_for_label}}" 
+        value="{{feild.value|default:""}}" 
+        placeholder="{{field.field.widget.attrs.placeholder}} " 
+        required="{{field.field.required}}">
+        <br>
+        {% endfor %}
+     </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static  %}
+<html>
+<head>
+    <title>{% block title%} {%  endblock title %} </title>
+    <link rel="stylesheet" href="{% static 'app1/css/style.css' %}">    
+</head>
+<body>
+    {% include "app1/inside_tem/navbar.html" %}
+    {% block a%}{% endblock a %}
+    {% block hero %}  {% endblock hero %}
+    {% block content %} {% endblock content %}
+    {% block com %} <li>This is tech company</li>{% endblock com %}
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login page</h1>
+    {{form}}
+<br><br>
+<h1> loop formet</h1>
+    {% for feild in form.visible_fields %}
+        {{feild.label_tag}}
+        {{feild}} <br>
+
+    {% endfor %}
+    {% for hideen in form.hidden_fields  %}
+        {{hideen}}
+    {% endfor %}
+</body>
+</html>

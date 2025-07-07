@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../13_tialwind"
+		},
+		{
+			"path": "../14_tialwind_css_cli"
+		},
+		{
+			"path": "../15_hyperlink"
+		},
+		{
+			"path": "../16_template_inside_tempate"
+		},
+		{
+			"path": "../17_dj_priject"
+		},
+		{
+			"path": "../18_orm"
+		},
+		{
+			"path": "../19_database_data_insert"
+		},
+		{
+			"path": "../z"
+		}
+	]
+}

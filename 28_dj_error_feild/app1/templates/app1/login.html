@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-error-css{
+            color:red   
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>User Login</h1>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            {{field.label_tag}}{{field}} 
+                {% for error in field.errors %}
+                    <span class='custom-error-css'>{{error}}</span> 
+                {% endfor %}
+
+        </div>
+        {% endfor %}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

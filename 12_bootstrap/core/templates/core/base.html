@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static  %}
+<html>
+<head>
+    <title>{% block title%} {%  endblock title %} </title>
+    {% comment %} 1.start {% endcomment %}
+    {% comment %} CDN method for buttons {% endcomment %}
+
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> {% endcomment %}
+    
+    {% comment %} ---------------------------------------------------{% endcomment %}
+    {% comment %} 2.start  {% endcomment %}
+    {% comment %} buttons mrthod use js and css downlowed {% endcomment %}
+
+    {% comment %} <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}"> {% endcomment %}
+    
+    {% comment %} ---------------------------------------------------{% endcomment %}
+     
+    {% comment %} 3.start {% endcomment %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+
+    
+    
+    {% block corecss %} <link rel="stylesheet" href="{% static 'core/css/style.css' %}"> {% endblock corecss %}
+
+
+</head>
+<body>
+    <ul>
+        <li>home 1</li>
+        <li>python</li>
+        <li>django</li>
+
+    </ul>
+    {% bootstrap_javascript %}
+
+    {% block content %} {% endblock content %}
+    {% block com %} This is tech company{% endblock com %}
+    {% comment %} 1.end{% endcomment %}
+    {% comment %} CDN method for buttons end part{% endcomment %}
+
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> {% endcomment %}
+
+
+    {% comment %} 2.end{% endcomment %}
+    {% comment %} button creat use download end part {% endcomment %}
+
+    {% comment %} <script src="{% static 'core/js/bootstrap.js' %}"></script> {% endcomment %}
+    {% comment %} ------------------------------------------------------------------------ {% endcomment %}
+</body>
+</html>

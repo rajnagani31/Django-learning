@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nero Technology</title>
+</head>
+<body>
+    <h1>Nero Technology  </h1>
+    <h3>LOOP TAG</h3>
+    <ul>
+            {% for name in names%}
+            <li>{{name}}</li>
+            {% endfor %}
+    </ul>
+    <h3>Rever sed name</h3>
+    <ul>
+        {% for name in names reversed%}
+        <li>{{name}}</li>
+        {% endfor %}
+    </ul>
+    
+
+    <h3> Empty</h3>
+    <ul>
+        {% for name in names%}
+        <li>{{name}}</li>
+        {% empty %}
+        <h3>Empty:not ditals found hire</h32>
+        {% endfor %}
+    </ul>    
+    <h2>Name withe count number </h2>
+    {% for name in names  %}
+    {{forloop.counter}} {{name}}<br>
+    {% endfor %}
+
+    <h3>Complex data Access</h3>
+    <h2>{{studant}}</h2>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{form}}
+    
+    <br>
+
+    <!-- form field by field-->
+     <form action="">
+        First Name:{{form.First_name}} <br>
+        last Name:{{form.last_name}}
+     </form>
+     
+     <br>
+
+     <!-- input by input -->
+
+     <form action = "">
+        {{form.First_name.label_tag}} {{form.First_name}}
+        {{form.last_name.label_tag}} {{form.last_name}}
+        
+     </form>
+     <br><br>
+
+     <!-- label to label -->
+     <form>
+      <label for= "{{form.First_name.id_for_label}}"> First name: </label> {{form.First_name}}
+      <label for= "{{form.last_name.id_for_label}}"> Last name: </label> {{form.last_name}}
+     </form>
+
+     <!-- input label -->
+     <form>
+      <label for= "{{form.First_name.id_for_label}}"> First name: </label> 
+      <input type="text" name="First_name" maxlength="50" required id="{{form.First_name.id_for_label}}" value="{{form.First_name.value|default:"raj"}}">
+
+      <label for= "{{form.last_name.id_for_label}}"> Last name: </label>
+      <input type="text" name="last_name" maxlength="50" required id="{{form.last_name.id_for_label}}" 
+      value="{{form.last_name.value|default:''}}">
+
+      <label for="{{form.Email.id_for_label}}"> Email: </label>
+      <input type="email" name="Email" maxlength="320" required id="{{form.Email.id_for_label}} " value="{{form.Email.value|default:''}}">
+     </form>
+
+     <div>
+      {% comment %} {{form.First_name.id_for_label}} {% endcomment %}
+      {% comment %} {{form.First_name.value}} {% endcomment %}
+      {{form.First_name}}
+      <br>
+      {{form.First_name.label_tag}}{{form.First_name}}
+
+      {{form.First_name.html_name}}
+      {{form.First_name.field.required}}
+      <br>
+      {{form.First_name.help_text}}
+
+      <pre>
+           {{form.First_name.help_text}}
+{{form.First_name.label_tag}}{{form.First_name}}
+      </pre>
+
+     </div>
+
+       
+</body>
+</html>

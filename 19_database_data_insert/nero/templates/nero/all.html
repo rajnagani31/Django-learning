@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nero Technology</title>
+</head>
+<body>
+    <h1>Nero Technology</h1>
+    {% if all_data %}
+    <h1>Profile Diteils:</h1>
+        <ul>
+            {% for data in all_data %}
+            <li> {{data.roll}} {{data.name}} - {{data.email}} </li>
+            {% endfor %}
+        <ul>
+    {% else %}
+    <h1> NO Data Found</h1>
+    {% endif %}
+</body>
+</html>

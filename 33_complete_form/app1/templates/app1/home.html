@@ -1,0 +1,201 @@
+{% extends "app1/base.html" %}
+
+{% block left-content %}
+
+<form action="" method='post' enctype='multipart'>
+    {% csrf_token %}
+    <!-- NAME -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-3'>
+        <label for="{{fm.name.id_for_label}}" class='form-label'>{{fm.name.label}}</label>
+    </div>
+    {{fm.name}}
+    {% if form.name.errors %}
+        <div class='text-danger'>
+            {% for error in form.name.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- DOB -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-3'>
+        <label for="{{fm.dob.id_for_label}}" class='form-label'>{{fm.dob.label}}</label>
+    </div>
+    {{fm.dob}}
+    {% if form.dob.errors %}    
+        <div class='text-danger'>
+            {% for error in form.dob.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- gender -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-0'>
+        <label for="{{fm.gender.id_for_label}}" class='form-label'>{{fm.gender.label}}</label>
+    </div>
+    {{fm.gender}}
+    {% if form.gender.errors %}    
+        <div class='text-danger'>
+            {% for error in form.gender.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <br>
+    <!-- locality -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.locality.id_for_label}}" class='form-label'>{{fm.locality.label}}</label>
+    </div>
+    {{fm.locality}}
+    {% if form.locality.errors %}    
+        <div class='text-danger'>
+            {% for error in form.locality.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <!-- city -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.city.id_for_label}}" class='form-label'>{{fm.city.label}}</label>
+    </div>
+    {{fm.city}}
+    {% if form.city.errors %}    
+        <div class='text-danger'>
+            {% for error in form.city.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- pin -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.pin.id_for_label}}" class='form-label'>{{fm.pin.label}}</label>
+    </div>
+    {{fm.pin}}
+    {% if form.pin.errors %}    
+        <div class='text-danger'>
+            {% for error in form.pin.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- state -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.state.id_for_label}}" class='form-label'>{{fm.state.label}}</label>
+    </div>
+    {{fm.state}}
+    {% if form.state.errors %}    
+        <div class='text-danger'>
+            {% for error in form.state.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+    <!-- mobile -->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.mobile.id_for_label}}" class='form-label'>{{fm.mobile.label}}</label>
+    </div>
+    {{fm.mobile}}
+    {% if form.mobile.errors %}    
+        <div class='text-danger'>
+            {% for error in form.mobile.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+    <!-- email-->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.email.id_for_label}}" class='form-label'>{{fm.email.label}}</label>
+    </div>
+    {{fm.email}}
+    {% if form.email.errors %}    
+        <div class='text-danger'>
+            {% for error in form.email.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+    <!-- job_city-->
+    {% if fm.non_field_errors %}
+        {% for error in fm.non_field_errors  %}
+        <p class='alert alert-danger my-3'>{{errors}}</p>
+        {% endfor %}
+    {% endif %}
+    <div class='mb-1'>
+        <label for="{{fm.job_city.id_for_label}}" class='form-label'>{{fm.job_city.label}}</label>
+    </div>
+    {{fm.job_city}}
+    {% if form.job_city.errors %}    
+        <div class='text-danger'>
+            {% for error in form.job_city.errors  %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+<button type='submit'   class='btn btn-primary'> Submit</button>
+
+    
+</form>
+{% endblock left-content %}
+
+{% block right-content %}
+
+<h2 class='text-center mb-3'>
+    <u>List of candidate</u>
+</h2>
+
+{% endblock right-content %}
