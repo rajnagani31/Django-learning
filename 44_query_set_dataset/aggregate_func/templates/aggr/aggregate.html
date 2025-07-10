@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border:1px solid black
+        }
+    </style>
+</head>
+<body>
+    <h1>Table</h1>
+    <table>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>City</th>
+        <th>Marks</th>
+        <th>Passing Year</th>
+        {% comment %} {% for data in table %} {% endcomment %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.roll_num}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.marks}}</td>
+            <td>{{data.passing_year}}</td>
+        </tr>
+    {% comment %} {% endfor %} {% endcomment %}
+    </table>
+        <h3> Sum:{{data.sum}}</h3>
+        <h3> Sum:{{data.sum.marks__sum}}</h3>
+
+
+        <h3> Avg:{{data.avg}}</h3>
+        <h3> Avg:{{data.avg.marks__avg}}</h3>
+
+        <h3> Min:{{data.min}}</h3>
+        <h3> Min:{{data.min.marks__min}}</h3>
+
+        <h3> Max:{{data.max}}</h3>
+        <h3> Max:{{data.max.marks__max}}</h3>
+
+        <h3> ID count:{{data.count_id}}</h3>
+        <h3> ID count:{{data.count_id.id__count}}</h3>
+
+        <h3>Marks 0:{{data.marks_0.marks__count}}</h3>
+        <h3>Marks 100:{{data.marks_100.marks__count}}</h3>
+        <h3>Marks 100:{{data.marks_150.marks__count}}</h3>
+
+        <h3>Surat:{{data.surat.city__count}}</h3>
+        <h3>Pune:{{data.pune.city__count}}</h3>
+
+        <h3>Passing Student list(2023):{{data.2023.passing_year__count}}</h3>
+        <h3>Passing Student list(2024):{{data.2024.passing_year__count}}</h3>
+        <h3>Passing Student list(2025):{{data.2025.passing_year__count}}</h3>
+        <h3>Passing Student list(2026):{{data.2026.passing_year__count}}</h3>
+
+
+
+
+
+
+
+    
+</body>
+</html> 
+
