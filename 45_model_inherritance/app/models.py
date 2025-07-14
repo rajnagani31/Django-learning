@@ -46,3 +46,11 @@ class Examcenter(models.Model):
 class data_Student(Examcenter):
     student_name=models.CharField(max_length=100) 
     roll=models.IntegerField() 
+
+
+class Product(models.Model):
+    name=models.CharField(max_length=100)
+    price=models.IntegerField()
+class Product2(Product):
+    class Meta:
+        proxy=True    
