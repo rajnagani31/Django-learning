@@ -46,4 +46,3 @@ class Examcenter(models.Model):
 class data_Student(Examcenter):
     student_name=models.CharField(max_length=100) 
     roll=models.IntegerField() 
-    
