@@ -39,18 +39,12 @@ class Examcenter(models.Model):
     center_name=models.CharField(max_length=500)
     center_city=models.CharField(max_length=100)
 
-# class Student(Examcenter):
-#     student_name=models.CharField(max_length=100) 
-#     roll=models.IntegerField() 
+class Student(Examcenter):
+    student_name=models.CharField(max_length=100) 
+    roll=models.IntegerField() 
 
 class data_Student(Examcenter):
     student_name=models.CharField(max_length=100) 
     roll=models.IntegerField() 
 
 
-class Product(models.Model):
-    name=models.CharField(max_length=100)
-    price=models.IntegerField()
-class Product2(Product):
-    class Meta:
-        proxy=True    
