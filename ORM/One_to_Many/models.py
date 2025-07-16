@@ -7,6 +7,7 @@ class Teacher(models.Model):
     subject = models.CharField(max_length=100)
 
 
-class Student(Teacher):
+class Student(models.Model):
     name = models.CharField(max_length=100)
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    

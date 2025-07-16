@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "one_to_one",
     "One_to_Many",
     "Many_to_Many",
+    "NF1",
+    
 ]
 
 MIDDLEWARE = [
