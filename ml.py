@@ -36,3 +36,5 @@ x[3]=10
 
 print(f"x:{x}")
 print(f"y:{y}")
+
+print("Make video on django seeding"* 5)
