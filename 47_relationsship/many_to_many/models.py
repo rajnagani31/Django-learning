@@ -13,4 +13,4 @@ class students(models.Model):
     choices=models.ManyToManyField(courses)    
 
     def write(self):
-        return ",".join([str(p) for p in self.choices.all()])
+        return ",".join([str(p) for p in self.choices.all()]) # convert list to string
