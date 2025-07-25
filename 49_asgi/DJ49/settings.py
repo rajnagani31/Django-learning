@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "app1",
-    "sync_to_async"
+    "sync_to_async",
+    "threading1",
+    "async_ORM",
+    "async_middleware",
+    
 ]
 
 MIDDLEWARE = [
@@ -50,6 +54,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # "async_middleware.middleware.syncMiddleware",
+    "async_middleware.middleware.AsyncMiddleware",
 ]
 
 ROOT_URLCONF = "DJ49.urls"
@@ -78,8 +84,12 @@ ASGI_APPLICATION = "DJ49.asgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "demo2",
+        "USER": "postgres",
+        "PASSWORD": "1234",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
