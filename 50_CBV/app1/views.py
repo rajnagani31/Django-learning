@@ -33,3 +33,6 @@ class RediractviewMethod(RedirectView):
 class RediractviewLogging(RedirectView):
     # pattern_name="loggin"    
     template='login.html'
+
+
+    
