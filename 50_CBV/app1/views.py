@@ -4,6 +4,8 @@ from django.views import View
 from django.views.generic import ListView
 from .models import NeroTech
 import asyncio
+from django.views.generic.base import RedirectView
+
 # Create your views here.
 class Myclass(ListView):
     model= NeroTech
@@ -22,3 +24,12 @@ class AsyncView(View):
 
 # TemplateView              
 
+# RedirectView
+
+class RediractviewMethod(RedirectView):
+    # url ='/'
+    url="https://app.eraser.io/dashboard"
+
+class RediractviewLogging(RedirectView):
+    # pattern_name="loggin"    
+    template='login.html'
