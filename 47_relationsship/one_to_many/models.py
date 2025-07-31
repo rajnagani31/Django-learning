@@ -22,7 +22,7 @@ class Teacher(models.Model):
     
 class student(models.Model):
     name=models.CharField(max_length=100)
-    course_choice=models.ForeignKey(Teacher,on_delete=models.SET_NULL,null=True)
+    course_choice=models.ForeignKey(Teacher,on_delete=models.CASCADE,null=True)
 
     def __str__(self):
         return self.name
